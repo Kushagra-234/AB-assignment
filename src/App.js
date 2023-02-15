@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import 'antd/dist/antd.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Table from './component/table';
+import Header from './component/header';
+
+import Search from './component/Search';
+import { loadApp } from './library/slices/state';
+import './index.scss';
+
+
+
+export default () => {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadApp());  
+  }, [])
+
+  return <>
+    <div className='app'>
+      <Header />
+      <Search/>
+      <Table />
+    
     </div>
-  );
-}
-
-export default App;
+  </>;
+};

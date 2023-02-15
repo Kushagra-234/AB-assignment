@@ -1,0 +1,89 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  
+  background-color: #001529;
+}
+
+body::-webkit-scrollbar-track {
+  
+  background-color: #F5F5F5;
+  border-radius: 1px;
+}
+
+input,
+textarea,
+select,
+button:focus {
+  outline: 0px;
+}
+
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px !important;
+}
+
+.app {
+  margin: 20px;
+}
+
+
+
+
+.search-options {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  p {
+    color: rgb(17, 17, 126);
+  }
+}
+
+// .tables-tag {
+//   text-transform: capitalize;
+//   // color: rgb(17, 17, 126);
+//   font-size: 0.9em;
+//   border: 2px solid rgb(240, 231, 231);
+//   border-radius: 0.3em;
+//   margin-right: 2px;
+//   padding: 2px 6px 1px;
+// }
+
+@media only screen and (max-width: 900px) {
+  .app {
+    margin: 13px;
+  }
+}
+
+
+
+.header{
+  color: orange;
+  font-size: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-left: 2px;
+  font-size: bold;
+}
